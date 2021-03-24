@@ -1,0 +1,51 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-central-1:051886484530:function:rememories"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "containsAds": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "locales": {
+        "de-DE": {}
+      },
+      "usesPersonalInfo": false
+    },
+    "publishingInformation": {
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "category": "ORGANIZERS_AND_ASSISTANTS",
+      "distributionCountries": [
+        "DE"
+      ],
+      "distributionMode": "PUBLIC",
+      "isAvailableWorldwide": false,
+      "locales": {
+        "de-DE": {
+          "description": "Eine Möglichkeit ein Tagebuch über Alexa zu führen. Einträge erstellen und Einträge verwalten. Dieses Tagebuch ist darauf abgezielt Alzheimerpatienten den Alltag zu erleichtern.",
+          "examplePhrases": [
+            "Alexa, starte re memories",
+            "Speichern",
+            "Vorlesen"
+          ],
+          "keywords": [],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/b8d0/77fb3b8580bb43e887f2bccea263a423/APP_ICON_LARGE?versionId=TPXRMHWuomuN4wrXzm8VyFs2GXT3yzE8&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20210125T153446Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QKQTYKJJO%2F20210125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=392438890de00f36ff4ba81e5a2137e2ac500b7907398b79d4b9a866f2c55968",
+          "name": "rememories",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/254c/00643928b9114d5383e6f733a07f0e5e/APP_ICON?versionId=ECSlC1Y87DZXFTMoKOkiFZLi0YiW1L79&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20210125T153446Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QKQTYKJJO%2F20210125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=9ab2573e512e6c194b32cce500253d8374060c5be95b2f1b47000274289d23ce",
+          "summary": "Tagebuch für Alexa",
+          "updatesDescription": ""
+        }
+      },
+      "testingInstructions": "German Language"
+    }
+  }
+}

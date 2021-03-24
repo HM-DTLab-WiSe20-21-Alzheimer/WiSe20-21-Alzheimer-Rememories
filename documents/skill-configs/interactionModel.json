@@ -1,0 +1,663 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "re memories",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "ciao",
+                        "beenden"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "StoreEntry",
+                    "slots": [
+                        {
+                            "name": "toStore",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{toStore}"
+                            ]
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "Speichern",
+                        "Ich möchte einen Eintrag speichern",
+                        "Ich möchte einen Eintrag erstellen",
+                        "Speichere {toStore}",
+                        "Ich möchte einen Eintrag für den {date} speichern",
+                        "Ich möchte einen Eintrag für {date} speichern",
+                        "Ich möchte einen Eintrag erstellen {toStore}",
+                        "erstelle Eintrag {toStore}",
+                        "Heute habe ich {toStore} gemacht."
+                    ]
+                },
+                {
+                    "name": "PlayEntry",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "von dem {date}",
+                                "{date}",
+                                "Vom {date} "
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Vorlesen",
+                        "Spiele einen Eintrag ab",
+                        "Ich möchte einen Eintrag abspielen",
+                        "Spiele den Eintrag von {date} ab",
+                        "Was habe ich am {date} gemacht",
+                        "Was habe ich {date} gemacht",
+                        "Spiele den Eintrag vom {date} ab"
+                    ]
+                },
+                {
+                    "name": "DeleteEntry",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "Lösche",
+                        "Ich möchte einen Eintrag löschen",
+                        "Tagebucheintrag löschen",
+                        "Entferne den Eintrag vom {date}",
+                        "Löschen",
+                        "Lösche den Eintrag vom {date}"
+                    ]
+                },
+                {
+                    "name": "ExistEntry",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "Prüfen",
+                        "Habe ich am {date} etwas gespeichert",
+                        "Prüfe",
+                        "Hab ich am {date} was gespeichert",
+                        "Habe ich {date} einen Eintrag erstellt",
+                        "Hab ich {date} was gespeichert",
+                        "Hab ich am {date} einen Eintrag erstellt",
+                        "Gibt es einen Eintrag am {date}"
+                    ]
+                },
+                {
+                    "name": "FindEntry",
+                    "slots": [
+                        {
+                            "name": "search",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "Wann habe ich das letzte mal über {search} gesprochen",
+                        "Suchen",
+                        "Finden",
+                        "Finde",
+                        "Suche",
+                        "Ich möchte einen Eintrag suchen",
+                        "Wann kam zuletzt {search} auf",
+                        "Wann habe ich zuletzt über {search} gesprochen"
+                    ]
+                },
+                {
+                    "name": "EditEntry",
+                    "slots": [
+                        {
+                            "name": "task",
+                            "type": "EditType",
+                            "samples": [
+                                "Ich möchte einen Eintrag {task}",
+                                "Eintrag {task}",
+                                "Ich möchte {task}",
+                                "Ich will {task}",
+                                "{task}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Bearbeiten",
+                        "Ich möchte einen Eintrag bearbeiten",
+                        "Ich möchte einen Eintrag {task}"
+                    ]
+                },
+                {
+                    "name": "ConfirmPlayEntry",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "ExpandEntry",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "Von {date}",
+                                "Vom {date}",
+                                "{date}"
+                            ]
+                        },
+                        {
+                            "name": "toStore",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "Ich möchte hinzufügen {toStore}",
+                                "Ich möchte {toStore} hinzufügen",
+                                "{toStore}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "ReplaceEntry",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "Von {date}",
+                                "Vom {date}",
+                                "{date}"
+                            ]
+                        },
+                        {
+                            "name": "toStore",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "Ich möchte speichern {toStore}",
+                                "Ich möchte {toStore} speichern",
+                                "{toStore}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "EditType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "ersetzen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "erweitern"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "StoreEntry",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "toStore",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.256139086644.144284266732",
+                                "elicitation": "Elicit.Slot.256139086644.144284266732"
+                            }
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "PlayEntry",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.800675921818.1344100241219"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DeleteEntry",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.620722265763"
+                    },
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.620722265763.1255507746525"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ExistEntry",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.510107406605.1182878781731"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FindEntry",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "search",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.444212982325.1223037199762"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "EditEntry",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "task",
+                            "type": "EditType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.730801774081.615426510709"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ConfirmPlayEntry",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.62184146708"
+                    },
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.281260614034.1576747744466"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ExpandEntry",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.697224784221.951122129269"
+                            }
+                        },
+                        {
+                            "name": "toStore",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.378730340214.1142922241554"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ReplaceEntry",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.260665974688.604833525217"
+                            }
+                        },
+                        {
+                            "name": "toStore",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.741191265561.1488190389816"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.256139086644.144284266732",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Was möchtest du denn speichern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Was hast du denn gemacht?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.256139086644.144284266732",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du {toStore} speichern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du folgendes Speichern {toStore} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.800675921818.1344100241219",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Von welchem Tag?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Von wann möchtest du den Eintrag?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.620722265763.1255507746525",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Welchen Eintrag soll ich löschen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Von wann soll ich den Eintrag löschen?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.620722265763",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Soll der Eintrag vom {date} gelöscht werden?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du den Eintrag vom {date} wirklich löschen?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.510107406605",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Soll ich den Eintrag abspielen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.510107406605.1182878781731",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Welches Datum soll ich prüfen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.444212982325.1223037199762",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wonach soll ich die Einträge durchsuchen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Was soll ich für dich suchen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Nach was möchtest du suchen?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1377659837248",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Soll ich den Eintrag abspielen?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.62184146708",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Soll ich ihn abspielen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du den Eintrag hören?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Soll ich den Eintrag abspielen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du ihn hören?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.354792887562",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du einen Eintrag erweitern?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.530772839506",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du einen Eintrag ersetzen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.530772839506.889662934893",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Was möchtest du denn speichern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.354792887562.290916344891",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Was möchtest du denn hinzufügen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.730801774081.615426510709",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du einen Eintrag ersetzen oder erweitern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.378730340214.1142922241554",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Was möchtest du hinzufügen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Was möchtest du denn hinzufügen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.741191265561.1488190389816",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Was möchtest du denn speichern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Was möchtest du speichern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.260665974688.604833525217",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Von wann ist der Eintrag der ersetzt werden soll?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Von welchem Datum ist der Eintrag der ersetzt werdel soll?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Von welchem Tag ist der Eintrag den du ersetzen möchtest?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.281260614034.1576747744466",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "a"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.697224784221.951122129269",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Von wann ist der Eintrag der erweitert werden soll?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Von welchem Datum ist der Eintrag der erweitert werden soll?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Von welchem Tag ist der Eintrag der erweitert werden soll?"
+                    }
+                ]
+            }
+        ]
+    }
+}
